@@ -17,7 +17,7 @@ func gooHandler(config *config) http.HandlerFunc {
 		res := GooRes{
 			Service: config.serviceName,
 			Version: config.version,
-			Res:     "Goose says, Hi!",
+			Res:     config.serviceName + " says, Hi!",
 		}
 
 		render.JSON(w, r, res)
