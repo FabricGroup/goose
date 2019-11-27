@@ -19,5 +19,8 @@ func readConfig() *config {
 	if os.Getenv("PORT") != "" {
 		config.port = os.Getenv("PORT")
 	}
+	if os.Getenv("SERVICE_NAME") != "" {
+		config.serviceName = os.Getenv("SERVICE_NAME")
+	}
 	return config
 }
